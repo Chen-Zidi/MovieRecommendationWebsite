@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" charset="utf-8"
+	content="width=device-width, initial-scale=1.0">
+<body>
+<head>
+
+
+<link href="./resultPage.css" rel="stylesheet" type="text/css" />
+<title>Movie Recommendation Result</title>
+</head>
+<body>
+	<div class="body">
+		<h1>Recommended Movie</h1>
+
+		<p id="user" class="notImportant"></p>
+		<p id="description" class="notImportant">
+			Click on the picture to access the source web page. <br /> If there
+			is no suitable movie according to your most decisive factor, we will
+			recommend according to your other choice.<br /> We would like to
+			recommend this movie to you:
+		</p>
+
+		<div id=result>
+			<p id="resultName" class="highlyImportant"></p>
+			<p id="resultDescription" class="notImportant"></p>
+			<p id="resultType" class="important"></p>
+			<p id="resultTag" class="important"></p>
+
+			<div id="imageContainer"></div>
+			<p id=imageMark class="notImportant">[1]</p>
+		</div>
+	</div>
+
+	<div class="buttons">
+		<button id="close" value="close" onclick="window.close();">close</button>
+	</div>
+
+	<footer>
+		<p id="resultReference" class="reference"></p>
+		<p id="backgroundReference" class="reference">[2]background:
+			https://unsplash.com/photos/evlkOfkQ5rE, last access date 29.10.2019</p>
+		<p id="buttonReference" class="reference">[3]button:
+			http://pngimg.com/search/?page=8&search=button, last access date
+			01.11.2019</p>
+	</footer>
+
+	<script src="resultPage.js"></script>
+</body>
+</html>

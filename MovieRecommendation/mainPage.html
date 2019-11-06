@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- chrome should both work. The page can adjust the content according to the window size. -->
+<html>
+<meta name="viewport" charset="utf-8"
+	content="width=device-width, initial-scale=1.0">
+<head>
+<title>Movie Recommendation</title>
+<link href="./mainPage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="title">
+		<h1>Find the suitable movie for you!</h1>
+		<h2>We would like to offer you three suitable movies which suits
+			your situation best.</h2>
+		<h2>Have your fun here! :) The page can adapt to window size.</h2>
+	</div>
+
+	<div class="question">
+		<p class="question">[1] What's your name?</p>
+		<p class="questionDescription">
+			Let's get familiar! Nickname or real name can both be used.<br />It
+			should be only 2-10 English characters(spaces, numbers and underlines
+			are not allowed).
+		</p>
+		<form class="inputField">
+			<input type="text" name="userName" id="userName">
+		</form>
+	</div>
+
+	<div class="question">
+		<p class="question">[2] What's your gender?</p>
+		<p class="questionDescription">The result may adapt to your gender
+			in some situations.</p>
+		<form class="inputField">
+
+			<input type="radio" class="gender" id="male" name="gender">Male
+			<div>
+				<br />
+			</div>
+
+			<input type="radio" class="gender" id="female" name="gender">Female
+			<div>
+				<br />
+			</div>
+		</form>
+	</div>
+
+
+	<div class="question">
+		<p class="question">[3] What is the number of people who would
+			like to watch the movie?</p>
+		<p class="questionDescription">The number of people would to some
+			extent decide which movies are recommended.</p>
+		<form class="inputField">
+
+			<input type="radio" class="number" id="one" name="number"
+				onchange="nextQuestion()">One
+			<div>
+				<br />
+			</div>
+
+			<input type="radio" class="number" id="two" name="number"
+				onchange="nextQuestion()">Two
+			<div>
+				<br />
+			</div>
+
+			<input type="radio" class="number" id="more" name="number"
+				onchange="nextQuestion()">Three and more
+			<div>
+				<br />
+			</div>
+		</form>
+	</div>
+
+	<div class="question">
+		<p class="question" id="nextQuestion"></p>
+		<br />
+		<p class="question" id="nextQuestionDescription"></p>
+		<form class="inputField" id="nextQuestionForm"></form>
+	</div>
+
+
+
+	<div class="question">
+		<p class="question">[5] What is the most decisive factor when you
+			are choosing a movie?</p>
+		<p class="questionDescription">If there is no suitable movie for
+			your choice, we will recommend the movie without considering this
+			factor.</p>
+		<form class="inputField">
+			<input type="radio" class="type" id="heated" name="type">Heated
+			<div>
+				<br />
+			</div>
+
+			<input type="radio" class="type" id="minority" name="type">Minority
+			<div>
+				<br />
+			</div>
+
+			<input type="radio" class="type" id="highlyEvaluated" name="type">Highly
+			evaluated
+			<div>
+				<br />
+			</div>
+		</form>
+	</div>
+
+	<div class="buttons">
+		<button id="submit" value="submit" onclick="newPage()">submit</button>
+		<button id="reset" value="reset" onclick="reset()">reset</button>
+	</div>
+
+
+
+	<footer>
+		<p class="reference">[1]background:
+			https://unsplash.com/photos/4nUQH0EXzfg, last access date 01.11.2019
+		</p>
+		<p class="reference">[2]button:
+			http://pngimg.com/search/?page=8&search=button, last access date
+			01.11.2019</p>
+
+	</footer>
+
+	<script src="mainPage.js"></script>
+</body>
+</html>
