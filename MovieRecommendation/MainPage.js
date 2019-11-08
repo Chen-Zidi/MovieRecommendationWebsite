@@ -1,4 +1,3 @@
-//a pull request test here
 /**
  * present the forth question according to the third question
  */
@@ -26,7 +25,7 @@ function nextQuestion() {
 		moodNegative.id = "negative";
 		moodNegative.value = "negative";
 		nextQuestionForm.appendChild(moodNegative);
-		nextQuestionForm.appendChild(document.createTextNode('negative mood'));
+		nextQuestionForm.appendChild(document.createTextNode('negative mood (sad, anger, and so on)'));
 
 		var br = document.createElement("div");
 		br.innerHTML = "<br/>";
@@ -38,7 +37,7 @@ function nextQuestion() {
 		moodPositive.id = "positive";
 		moodPositive.value = "positive";
 		nextQuestionForm.appendChild(moodPositive);
-		nextQuestionForm.appendChild(document.createTextNode('positive mood'));
+		nextQuestionForm.appendChild(document.createTextNode('positive mood (happy, excited, and so on)'));
 
 		var br = document.createElement("div");
 		br.innerHTML = "<br/>";
@@ -151,8 +150,7 @@ function nextQuestion() {
 		relationshipOthers.id = "others";
 		relationshipOthers.value = "others";
 		nextQuestionForm.appendChild(relationshipOthers);
-		nextQuestionForm.appendChild(document
-				.createTextNode('Other relationships'));
+		nextQuestionForm.appendChild(document.createTextNode('Other relationships'));
 
 	}
 
@@ -171,7 +169,7 @@ function selectMovie() {
 				name : "One Day",
 				type : "love",
 				description : "A love story that lasted for twenty years. The story is twisted and moving. \n"
-						+ "It is worth mentioning that the hroine is played by Anne Hathaway.",
+						+ "It is worth mentioning that the heroine is played by Anne Hathaway.",
 				href : "https://upload.wikimedia.org/wikipedia/en/a/ad/One_Day_Poster.jpg",
 				reference : "[1]content: https://en.wikipedia.org/wiki/One_Day_(2011_film), last access date 02.11.2019",
 				factor : "highly evaluated"
@@ -200,7 +198,7 @@ function selectMovie() {
 				type : "story",
 				description : "This film is based on Agatha Christie’s novel. \n When I was watching it, I can hardly predict the next episode."
 						+ " In the movie, it also alerts that please keep secret to others about the story.",
-				href : "https://en.wikipedia.org/wiki/Witness_for_the_Prosecution_(1957_film)#/media/File:Movie_poster_for_%22Witness_for_the_Prosecution%22.jpg",
+				href : "https://upload.wikimedia.org/wikipedia/en/a/ad/Movie_poster_for_%22Witness_for_the_Prosecution%22.jpg",
 				reference : "[1]content: https://en.wikipedia.org/wiki/Witness_for_the_Prosecution_(1957_film), last access date 02.11.2019",
 				factor : "minority,highly evaluated"
 			},
@@ -219,7 +217,7 @@ function selectMovie() {
 				type : "horror",
 				description : "A heated horror film. It mainly talks about a family. \nThey"
 						+ " have to talk by gestures, otherwise they will killed by the monsters. I think it is a unusual setting and worth watching. ",
-				href : "https://en.wikipedia.org/wiki/File:A_Quiet_Place_film_poster.png",
+				href : "https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png",
 				reference : "[1]content: https://en.wikipedia.org/wiki/A_Quiet_Place_(film), last access date 02.11.2019",
 				factor : "heated"
 			},
@@ -393,7 +391,7 @@ function validate() {
 	errorExist = false;
 	if (!((/^[A-Za-z]{2,10}$/).test(document.getElementById("userName").value))) {
 		error = error
-				+ "User name is not correct. It should be 2-10 English characters without spaces, numbers and underlines.";
+				+ "User name is not correct. It should be 2-10 English characters without spaces, numbers and underlines.\n";
 		errorExist = true;
 	}
 	if (!(document.getElementById("male").checked || document
@@ -464,7 +462,7 @@ function newPage() {
 		}
 
 		selectMovie();
-		window.open("resultPage.html");
+		window.open("ResultPage.html");
 
 	}
 
@@ -477,5 +475,4 @@ function reset() {
 	location.reload();
 
 }
-
 
